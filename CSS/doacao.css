@@ -1,0 +1,249 @@
+/* Configurações Gerais / Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f7f9fa;
+    color: #333;
+    padding-left: 240px; /* Espaço para a barra lateral no PC */
+    padding-top: 80px;  /* Espaço para a barra superior no PC */
+}
+
+/* --- TOPO DA PÁGINA (Header) --- */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 240px;
+    right: 0;
+    height: 80px;
+    background-color: #b7e7ff;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 100;
+}
+
+.topbar-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.search-filter-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 50%;
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+}
+
+.search-box i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 12px 12px 45px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+    background-color: white;
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.filter-btn:hover, .notification-icon:hover {
+    opacity: 0.8;
+}
+
+.notification-icon {
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+/* --- MENU LATERAL (Sidebar) --- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 240px;
+    background-color: white;
+    border-right: 1px solid #e0e0e0;
+    padding: 30px 0;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 25px;
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.sidebar ul li a i {
+    font-size: 1.2rem;
+    width: 25px;
+}
+
+.sidebar ul li:hover a, .sidebar ul li.active a {
+    color: #1e62d0;
+    background-color: #f0f5ff;
+}
+
+.sidebar ul li.active a {
+    border-left: 4px solid #1e62d0;
+}
+
+/* --- CONTEÚDO PRINCIPAL & CARDS --- */
+.main-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 40px;
+}
+
+/* Grid para os cards ficarem lado a lado no computador */
+.grid-pedidos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid #eaeaea;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.card-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.card-description {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Garante que os botões fiquem alinhados embaixo */
+}
+
+/* Rodapé do Card */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+/* Sinalizadores de Prioridade */
+.priority {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.alta { color: #cc0000; }
+.alta .dot { background-color: #cc0000; }
+
+.media { color: #f1b200; }
+.media .dot { background-color: #f1b200; }
+
+.baixa { color: #008744; }
+.baixa .dot { background-color: #008744; }
+
+/* Botão Doar */
+.btn-doar {
+    background-color: #00875a; /* Verde do app */
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+}
+
+.btn-doar:hover {
+    background-color: #006644;
+}
+
+/* Responsividade Básica extra */
+@media (max-width: 900px) {
+    body { padding-left: 0; }
+    .sidebar { display: none; }
+    .topbar { left: 0; }
+}

@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #b7e7ff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/*Adiconado para ondedoar*/
+p,a {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+nav {
+    font-size: 16px;
+    word-spacing: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+}
+
+nav a:hover{
+    text-decoration: underline;
+    color: rgb(0, 34, 34);
+    transition: 0.3s;
+}
+
+/*Modificado para ondedoar*/
+main {
+    flex-grow: 0.7;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+    margin: 10px;
+}
+
+/*Adiconado para ondedoar*/
+.ongDestaque { 
+    width: 100%;
+    height: 25vh;
+    flex-grow: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+}
+
+/*Adiconado para ondedoar*/
+.CentroDoacoes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 4%;
+}
+
+/*Adiconado para ondedoar*/
+.card-ong{
+    padding: 10px;
+    border: solid black;
+    margin: 5px;
+    font-family: sans-serif;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: end; 
+    flex-direction: column;
+}
+
+/*Adiconado para ondedoar*/
+.logoong{ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.roboto-text {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #b7e7ff;
+    text-align: center;
+}
+
+#header-logo {
+    width: 40%;
+    height: 120px;
+    max-width: fit-content;
+    max-height: fit-content;
+    
+}
+
+h1 {
+    font-size: 250%;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+nav {
+    font-size: 16px;
+    word-spacing: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+}
+
+nav a:hover{
+    text-decoration: underline;
+    color: rgb(0, 34, 34);
+    transition: 0.3s;
+}
+
+main {
+    flex-grow: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+}
+
+img{
+    width: 40px;
+    width: 40px;
+}
+
+.btn {
+    background-color: #82E05D; 
+    color: #000;
+    text-decoration: none;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 50px; 
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #6ec24a; 
+    transition: 0.3s
+}
+
+.btn-doador {
+    background-color: #006eff; 
+    color: #ffffff;
+    text-decoration: none;
+    width: 18%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px; 
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    gap: 35%;
+    align-items: center;
+}
+.btn-doador:hover {
+    padding: 25px;
+    transition: 0.3s
+}
+
+.btn-recebedor {
+    background-color: #82E05D; 
+    color: #ffffff;
+    text-decoration: none;
+    width: 18%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px; 
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35%;
+}
+
+.btn-recebedor:hover {
+    padding: 25px;
+    transition: 0.3s
+}
+
+.btn-voltar{
+    background-color: #82E05D; 
+    color: #000;
+    text-decoration: none;
+    width: 220px;
+    padding: 17px;
+    text-align: center;
+    border-radius: 50px; 
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-voltar:hover {
+    background-color: #6ec24a; 
+    width: 230px;
+    transition: 0.3s
+}
+
+.nao-conta{
+    display: flex;
+    justify-content: center;
+}

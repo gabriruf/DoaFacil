@@ -1,0 +1,188 @@
+/* Reset básico de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container do Formulário otimizado para Desktop */
+.form-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 440px; /* Alinhado com a largura da tela anterior */
+    padding: 35px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Estrutura de cada campo */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #212121;
+    margin-bottom: 10px;
+}
+
+/* Estilização Geral de Inputs, Textarea e Select */
+input[type="text"], textarea, select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-family: 'Roboto', sans-serif;
+    color: #333333;
+    background-color: #fafafa;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+input[type="text"]:focus, textarea:focus, select:focus {
+    border-color: #0fa64f;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(15, 166, 79, 0.1);
+}
+
+/* Placeholder cinza idêntico à imagem */
+::placeholder {
+    color: #9e9e9e;
+    opacity: 1;
+}
+
+/* Textarea sem redimensionamento horizontal bagunçado */
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Customização do Select e da Seta Lateral */
+.select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+select {
+    appearance: none; /* Esconde a seta padrão do navegador */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    padding-right: 40px;
+}
+
+.select-arrow {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #555555;
+    pointer-events: none; /* Garante que o clique passe para o select */
+}
+
+/* --- Bloco de Urgência (Botões de Opção) --- */
+.urgencia-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.urgencia-card {
+    cursor: pointer;
+    position: relative;
+}
+
+/* Esconde o rádio original redondo */
+.urgencia-card input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Aparência base do botão de urgência */
+.urgencia-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px 6px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #ffffff;
+    transition: all 0.2s ease;
+    opacity: 0.85; /* Efeito de não selecionado sutil */
+}
+
+.urgencia-content .material-icons-outlined {
+    font-size: 18px;
+}
+
+/* Cores específicas de cada botão */
+.alta .urgencia-content { background-color: #c61313; }
+.media .urgencia-content { background-color: #f1b200; color: #1e1e1e; }
+.baixa .urgencia-content { background-color: #0fa64f; }
+
+/* Efeito Hover nos botões de urgência */
+.urgencia-card:hover .urgencia-content {
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
+/* Efeito de Selecionado (Destaque quando o usuário clica) */
+.urgencia-card input[type="radio"]:checked + .urgencia-content {
+    opacity: 1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+    transform: scale(1.03);
+}
+
+/* --- Botão Publicar Pedido --- */
+.btn-submit {
+    width: 100%;
+    padding: 16px;
+    background-color: #0fa64f;
+    border: none;
+    border-radius: 14px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+    background-color: #0c8a41;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(15, 166, 79, 0.2);
+}
+
+.btn-submit .material-icons-outlined {
+    font-size: 20px;
+    transform: rotate(-25deg); /* Inclina ligeiramente o ícone de avião de papel */
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,182 @@
+/* Reset Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container que limita o tamanho máximo no PC para não esticar demais */
+.profile-desktop-container {
+    width: 100%;
+    max-width: 650px; /* Largura ideal para leitura e clique em computadores */
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/* Cabeçalho que simula o topo azul original, mas adaptado para o card de PC */
+.profile-header {
+    background-color: #0c6b00;
+    color: white;
+    padding: 25px 40px;
+    text-align: center;
+}
+
+.profile-header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Área interna do bloco de perfil */
+.profile-box {
+    padding: 40px;
+}
+
+/* Card do Usuário (Avatar + Textos) */
+.user-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #edf0f4;
+    margin-bottom: 25px;
+}
+
+.avatar-wrapper {
+    width: 85px;
+    height: 85px;
+    background-color: #1e62d0;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+.user-details h2 {
+    font-size: 1.4rem;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.user-email {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+.edit-link {
+    color: #3cd01e;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.edit-link:hover {
+    text-decoration: underline;
+    color: #299e11;
+}
+
+/* Lista de Opções de Menu */
+.options-list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #edf0f4;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.option-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    background-color: white;
+    border-bottom: 1px solid #edf0f4;
+    cursor: pointer;
+    transition: background-color 0.15s, transform 0.15s;
+}
+
+.option-item:last-child {
+    border-bottom: none;
+}
+
+/* Efeito Hover para Computador (Passar o mouse) */
+.option-item:hover {
+    background-color: #f8fafd;
+}
+
+.option-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #2c3e50;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.icon-leading {
+    font-size: 1.25rem;
+    color: #7f8c8d;
+    width: 24px;
+    text-align: center;
+}
+
+.icon-trailing {
+    font-size: 0.9rem;
+    color: #b2bec3;
+    transition: transform 0.2s;
+}
+
+.option-item:hover .icon-trailing {
+    transform: translateX(3px); /* Pequena animação ao passar o mouse */
+    color: #1ed02d;
+}
+
+/* Área do Botão de Sair */
+.logout-wrapper {
+    margin-top: 10px;
+}
+
+.logout-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: none;
+    border: 1px solid #fadbd8;
+    background-color: #fdf2f2;
+    padding: 16px 24px;
+    border-radius: 12px;
+    color: #e74c3c;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.logout-btn:hover {
+    background-color: #f9e4e4;
+    border-color: #f5b7b1;
+    color: #c0392b;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+}

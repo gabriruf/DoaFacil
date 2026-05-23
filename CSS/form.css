@@ -1,0 +1,76 @@
+/* Reset de estilos */
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.form-cadastro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background-color: #D9D9D9; 
+    padding: 10px 15px;
+    width: 48%; 
+    height: 50px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: normal;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.input-group input {
+    background: transparent;
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 16px;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;    
+}
+
+.btn-criar {
+    background-color: #82E05D; 
+    color: #000;
+    border: none;
+    width: 220px;
+    padding: 15px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-criar:hover {
+    background-color: #6ec24a; 
+    width: 230px;
+    transition: 0.3s
+}
+
+@media (max-width: 600px) {
+    .input-group {
+        width: 100%;
+    }
+}
