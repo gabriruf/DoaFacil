@@ -1,84 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criar Pedido</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/CSS/criar_pedido.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Criar Pedido</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../CSS/criar_pedido.css">
+        <link rel="icon" type="image/x-icon" href="../img/logo-favicon.ico">
+    </head>
+    <body>
 
-    <main class="form-container">
-        <form>
-            <div class="form-group">
-                <label for="titulo">Título do pedido</label>
-                <input type="text" id="titulo" placeholder="Ex: Preciso de cesta básica" required>
-            </div>
-
-            <div class="form-group">
-                <label for="descricao">Descrição</label>
-                <textarea id="descricao" rows="4" placeholder="Descreva o que você precisa..." required></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="categoria">Categoria</label>
-                <div class="select-wrapper">
-                    <select id="categoria" required>
-                        <option value="" disabled selected hidden>Selecione uma categoria</option>
-                        <option value="roupa">Roupa</option>
-                        <option value="alimento">Alimento</option>
-                        <option value="higiene">Itens de higiene</option>
-                        <option value="outros">Outros</option>
-                    </select>
-                    <span class="material-icons-outlined select-arrow">expand_more</span>
+        <main class="form-container">
+            <form>
+                <div class="form-group">
+                    <label for="titulo">Título do pedido</label>
+                    <input type="text" id="titulo" placeholder="Ex: Preciso de cesta básica" required>
                 </div>
-            </div>
 
-            <div class="form-group">
-                <label>Urgência</label>
-                <div class="urgencia-container">
+                <div class="form-group">
+                    <label for="descricao">Descrição</label>
+                    <textarea id="descricao" rows="4" placeholder="Descreva o que você precisa..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="categoria">Categoria</label>
+                    <div class="select-wrapper">
+                        <select id="categoria" required>
+                            <option value="" disabled selected hidden>Selecione uma categoria</option>
+                            <option value="roupa">Roupa</option>
+                            <option value="alimento">Alimento</option>
+                            <option value="higiene">Itens de higiene</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                        <span class="material-icons-outlined select-arrow">expand_more</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Urgência</label>
+                    <div class="urgencia-container">
                     
-                    <label class="urgencia-card alta">
-                        <input type="radio" name="urgencia" value="alta" required>
-                        <span class="urgencia-content">
-                            <span class="material-icons-outlined">error_outline</span>
-                            Alta
-                        </span>
-                    </label>
+                        <label class="urgencia-card alta">
+                            <input type="radio" name="urgencia" value="alta" required>
+                            <span class="urgencia-content">
+                                <span class="material-icons-outlined">error_outline</span>
+                                Alta
+                            </span>
+                        </label>
 
-                    <label class="urgencia-card media">
-                        <input type="radio" name="urgencia" value="media">
-                        <span class="urgencia-content">
-                            <span class="material-icons-outlined">lightbulb</span>
-                            Média
-                        </span>
-                    </label>
+                        <label class="urgencia-card media">
+                            <input type="radio" name="urgencia" value="media">
+                            <span class="urgencia-content">
+                                <span class="material-icons-outlined">lightbulb</span>
+                                Média
+                            </span>
+                        </label>
 
-                    <label class="urgencia-card baixa">
-                        <input type="radio" name="urgencia" value="baixa">
-                        <span class="urgencia-content">
-                            <span class="material-icons-outlined">check_circle_outline</span>
-                            Baixa
-                        </span>
-                    </label>
+                        <label class="urgencia-card baixa">
+                            <input type="radio" name="urgencia" value="baixa">
+                            <span class="urgencia-content">
+                                <span class="material-icons-outlined">check_circle_outline</span>
+                                Baixa
+                            </span>
+                        </label>
 
+                    </div>
                 </div>
-            </div>
 
-            <button type="submit" class="btn-submit" onclick="funcao1()">
-                <a href="/sites/receber.html"><span class="material-icons-outlined">send</span>
-                PUBLICAR PEDIDO</a>
-            </button>
-        </form>
-    </main>
+                <button type="submit" class="btn-submit" onclick="funcao1()">
+                    <a href="/sites/receber.html"><span class="material-icons-outlined">send</span>
+                    PUBLICAR PEDIDO</a>
+                </button>
+            </form>
+        </main>
 
-    <script>
-        function funcao1()
-    {
-        alert("Pedido solicitado com êxito!!!");
-    }
-    </script>
-</body>
+        <script>
+            function funcao1()
+        {
+            alert("Pedido solicitado com êxito!!!");
+        }
+        </script>
+    </body>
 </html>

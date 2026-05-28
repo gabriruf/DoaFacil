@@ -1,107 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedidos Disponíveis</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/CSS/doacao.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pedidos Disponíveis</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="../CSS/doacao.css">
+        <link rel="icon" type="image/x-icon" href="../img/logo-favicon.ico">
+    </head>
+    <body>
 
-    <header class="topbar">
-        <div class="topbar-container">
-            <h1 class="logo">Pedidos disponíveis</h1>
-            <div class="search-filter-container">
-                <div class="search-box">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Buscar pedidos...">
+        <header class="topbar">
+            <div class="topbar-container">
+                <h1 class="logo">Pedidos disponíveis</h1>
+                <div class="search-filter-container">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Buscar pedidos...">
+                    </div>
+                    <button class="filter-btn">
+                        <i class="fa-solid fa-sliders"></i>
+                    </button>
                 </div>
-                <button class="filter-btn">
-                    <i class="fa-solid fa-sliders"></i>
-                </button>
+                <div class="notification-icon">
+                    <i class="fa-regular fa-bell"></i>
+                </div>
             </div>
-            <div class="notification-icon">
-                <i class="fa-regular fa-bell"></i>
-            </div>
-        </div>
-    </header>
+        </header>
 
-    <main class="main-container">
-        <section class="grid-pedidos">
+        <main class="main-container">
+            <section class="grid-pedidos">
             
-            <article class="card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=500" alt="Cesta básica">
-                </div>
-                <div class="card-content">
-                    <h2 class="card-title">Cesta básica</h2>
-                    <p class="card-description">Família com 3 crianças precisa de alimentos básicos.</p>
-                    
-                    <div class="card-footer">
-                        <span class="priority alta">
-                            <span class="dot"></span> Alta
-                        </span>
-                        <button class="btn-doar">
-                            <i class="fa-solid fa-heart"></i> DOAR
-                        </button>
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=500" alt="Cesta básica">
                     </div>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=500" alt="Roupas de inverno">
-                </div>
-                <div class="card-content">
-                    <h2 class="card-title">Roupas de inverno</h2>
-                    <p class="card-description">Precisamos de roupas de frio para adultos e crianças.</p>
+                    <div class="card-content">
+                        <h2 class="card-title">Cesta básica</h2>
+                        <p class="card-description">Família com 3 crianças precisa de alimentos básicos.</p>
                     
-                    <div class="card-footer">
-                        <span class="priority media">
-                            <span class="dot"></span> Média
-                        </span>
-                        <button class="btn-doar">
-                            <i class="fa-solid fa-heart"></i> DOAR
-                        </button>
+                        <div class="card-footer">
+                            <span class="priority alta">
+                                <span class="dot"></span> Alta
+                            </span>
+                            <button class="btn-doar">
+                                <i class="fa-solid fa-heart"></i> DOAR
+                            </button>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
 
-            <article class="card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=500" alt="Itens de higiene">
-                </div>
-                <div class="card-content">
-                    <h2 class="card-title">Itens de higiene</h2>
-                    <p class="card-description">Precisamos de sabonete, shampoo, pasta de dente e outros.</p>
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=500" alt="Roupas de inverno">
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">Roupas de inverno</h2>
+                        <p class="card-description">Precisamos de roupas de frio para adultos e crianças.</p>
                     
-                    <div class="card-footer">
-                        <span class="priority baixa">
-                            <span class="dot"></span> Baixa
-                        </span>
-                        <button class="btn-doar">
-                            <i class="fa-solid fa-heart"></i> DOAR
-                        </button>
+                        <div class="card-footer">
+                            <span class="priority media">
+                                <span class="dot"></span> Média
+                            </span>
+                            <button class="btn-doar">
+                                <i class="fa-solid fa-heart"></i> DOAR
+                            </button>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
 
-        </section>
-    </main>
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=500" alt="Itens de higiene">
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">Itens de higiene</h2>
+                        <p class="card-description">Precisamos de sabonete, shampoo, pasta de dente e outros.</p>
+                    
+                        <div class="card-footer">
+                            <span class="priority baixa">
+                                <span class="dot"></span> Baixa
+                            </span>
+                            <button class="btn-doar">
+                                <i class="fa-solid fa-heart"></i> DOAR
+                            </button>
+                        </div>
+                    </div>
+                </article>
 
-    <nav class="sidebar">
-        <ul>
-            <li class="active"><a href="#"><span>Início</span></a></li>
-            <li><a href="#"><span>Favoritos</span></a></li>
-            <li><a href="#"><span>Minhas doações</span></a></li>
-            <li><a href="/sites/perfil.html"><span>Perfil</span></a></li>
-            <li><a href="/index.html"><span>Menu inicial</span></a></li>
-            <li><a href="/sites/ondedoar.html" target="_blank">Saiba onde doar</a></li>
-            <li><a href="#">Conhecimento Financeiro</a></li>
-            <li><a href="#">Sobre nós</a></li>
-        </ul>
-    </nav>
+            </section>
+        </main>
 
-</body>
+        <nav class="sidebar">
+            <ul>
+                <li class="active"><a href="#"><span>Início</span></a></li>
+                <li><a href="#"><span>Favoritos</span></a></li>
+                <li><a href="./doacao.html"><span>Minhas doações</span></a></li>
+                <li><a href="./perfil.php"><span>Perfil</span></a></li>
+                <!-- <li><a href="./index.html"><span>Menu inicial</span></a></li> -->
+                <li><a href="./ondedoar.html" target="_blank">Saiba onde doar</a></li>
+                <li><a href="#">Conhecimento Financeiro</a></li>
+                <li><a href="#">Sobre nós</a></li>
+            </ul>
+        </nav>
+
+    </body>
 </html>
