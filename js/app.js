@@ -10,12 +10,12 @@ function caregarongs(){
 
     
     for (let ong of ongs){
-          results +=    `<div class="card-ong"> 
+          results +=   `<div class="card-ong">
                             <div class="tituloong">
                                 <h1>${ong.nome}</h1>
                             </div>
                             <div class = "logoong">
-                                <img src="/img/${ong.img}" alt="Logo da ong ${ong.nome}" width="250">
+                                <img src="${ong.img}" alt="Logo da ong ${ong.nome}" width="250">
                             </div>
                             <div class="infoong">
                                 <p class= "modadalidade">
