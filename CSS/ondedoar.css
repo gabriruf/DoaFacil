@@ -16,7 +16,6 @@ header {
     text-align: center;
 }
 
-
 h1 {
     font-size: 2rem;
     font-weight: bold;
@@ -35,19 +34,6 @@ nav {
     word-spacing: 5px;
 }
 
-nav a {
-    text-decoration: none;
-    color: #000;
-    text-transform: uppercase;
-}
-
-nav a:hover{
-    text-decoration: underline;
-    color: rgb(0, 34, 34);
-    transition: 0.3s;
-}
-
-/*Modificado para ondedoar*/
 main {
     flex-grow: 0.7;
     display: flex;
@@ -56,7 +42,6 @@ main {
     margin: 10px;
 }
 
-/*Adiconado para ondedoar*/
 .ongDestaque { 
     width: 100%;
     height: 25vh;
@@ -67,30 +52,52 @@ main {
     align-items: center;
     gap: 30px; 
 }
-
-/*Adiconado para ondedoar*/
-.CentroDoacoes{
+.CentroDoacoes {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
-    gap: 4%;
+    
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; 
+    padding: 20px;
 }
 
-/*Adiconado para ondedoar*/
-.card-ong{
-    padding: 10px;
-    border: solid black;
-    margin: 5px;
-    font-family: sans-serif;
-    border-radius: 25px;
+.card-ong {
+    padding: 25px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea; 
+    border-radius: 16px; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     align-items: center;
-    justify-content: end; 
+    justify-content: flex-start; 
     flex-direction: column;
+    gap: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    text-align: center;
 }
 
-/*Adiconado para ondedoar*/
-.logoong{ 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.card-ong:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12); 
+    border-color: #b7e7ff; 
+}
+
+.logoong { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px; 
+    height: 120px;
+    background-color: #f9f9f9; 
+    border-radius: 50%; 
+    margin-bottom: 10px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.logoong img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
 }

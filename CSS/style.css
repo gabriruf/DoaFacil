@@ -5,6 +5,18 @@
     padding: 0;
 }
 
+.textos-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Mantém os textos alinhados à esquerda perto do logo */
+    justify-content: center;
+}
+
+/* Remove a margem do h1 especificamente no cabeçalho para que o subtítulo não fique muito longe */
+.textos-header h1 {
+    margin-bottom: 5px; 
+}
+
 .roboto-text {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
@@ -23,7 +35,12 @@ body {
 
 header {
     background-color: #b7e7ff;
-    text-align: center;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza o LOGIN horizontalmente na tela */
+    position: relative; /* Necessário para posicionar o bloco '.a' de forma absoluta */
+    padding: 20px;
+    min-height: 150px; /* Garante uma altura mínima para a barra azul */
 }
 
 #header-logo {
@@ -164,4 +181,18 @@ img{
 .nao-conta{
     display: flex;
     justify-content: center;
+}
+
+.a {
+    display: flex;
+    align-items: center;
+    position: absolute; /* Tira do fluxo para não atrapalhar o centro da tela */
+    left: 20px; /* Distância da borda esquerda */
+}
+
+.titulo-login {
+    font-size: 250%; /* Tamanho maior para destacar */
+    font-weight: bold;
+    margin: 0; /* Remove a margem padrão para um alinhamento perfeito */
+    text-transform: uppercase;
 }

@@ -13,13 +13,19 @@ session_start();
         <title>Login DOA FÁCIL</title>
     </head>
     <body>
-        <header class="header">
-            <img id="header-logo" alt='Logotipo do "Doá Facil"' src="img/img00.png">
-            <h1><span style="color: rgb(0, 165, 0);">DOA</span><span style="color: rgb(0, 81, 255);">Fácil</span></h1>
-            <h4>CONECTANDO QUEM DOA A QUEM PRECISA</h2>
 
-            <h1>Login</h1>
-        </header>
+    <header class="header">
+        <div class="a">
+        <img id="header-logo" alt='Logotipo do "Doá Facil"' src="img/img00.png">
+        
+        <div class="textos-header">
+            <h1><span style="color: rgb(0, 165, 0);">DOA</span><span style="color: rgb(0, 81, 255);">Fácil</span></h1>
+            <h4>CONECTANDO QUEM DOA A QUEM PRECISA</h4>
+        </div>
+    </div>
+    
+    <h3 class="titulo-login">LOGIN</h3> 
+    </header>
 
         <main class="container">
             <?php
@@ -69,35 +75,33 @@ session_start();
             }
             ?>
             <form action="./index.php" method="POST" class="form-cadastro">
-                <!-- Campo de Email -->
-                <div class="input-group full-width">
-                    <label for="email">EMAIL:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
+    
+    <div class="input-group full-width">
+        <input type="email" id="email" name="email" placeholder=" " required>
+        <label for="email" class="float-label">EMAIL:</label>
+    </div>
 
-                <!-- Campo de Senha -->
-                <div class="input-group full-width">
-                    <label for="senha">SENHA:</label>
-                    <input type="password" id="senha" name="senha" required>
-                </div>
+    <div class="input-group full-width">
+        <input type="password" id="senha" name="senha" placeholder=" " required>
+        <label for="senha" class="float-label">SENHA:</label>
+    </div>
 
-                <div class="input-group full-width">
-                    <label for="access-type">TIPO DE ACESSO:</label>
-                    <select name="opcoes-acesso" id="opt-acesso">
-                        <option value="">-- Selecione uma opção --</option>
-                        <option value="Donatário">Donatário</option>
-                        <option value="Doador">Doador</option>
-                    </select>
-                </div>
+    <div class="input-group full-width" id="escolha">
+        <label for="opt-acesso" id="opcao">TIPO DE ACESSO:</label>
+        <select name="opcoes-acesso" id="opt-acesso" required>
+            <option value="">-- Selecione uma opção --</option>
+            <option value="Donatário">Donatário</option>
+            <option value="Doador">Doador</option>
+        </select>
+    </div>
 
-                <!-- Botão Entrar -->
-                <div class="button-container">
-                    <button type="submit" value="login" name="login" class="btn">ENTRAR</button>
-                </div>
+    <div class="button-container">
+        <button type="submit" value="login" name="login" class="btn">ENTRAR</button>
+    </div>
 
-                <p class="nao-conta roboto-text">Ainda não possui uma conta?&nbsp;<a href="sites/cadastro.php">Cadastre-se</a></p>
+    <p class="nao-conta">Ainda não possui uma conta?&nbsp;<a href="sites/cadastro.php">Cadastre-se</a></p>
 
-            </form>
+</form>
             <!-- <a href="../index.html" class="btn-voltar">Voltar</a> -->
         </main>
 

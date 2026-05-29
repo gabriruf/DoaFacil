@@ -1,5 +1,7 @@
 <?php
-    $envfile = parse_ini_file('.env');
+    define('ROOT_PATH', dirname(__DIR__, 1));
+
+    $envfile = parse_ini_file(ROOT_PATH . '/.env');
     $servername = $envfile["SERVER_NAME"]; 
     $dbusername = $envfile["DB_USERNAME"];
     $dbpassword = $envfile["DB_PASSWD"];

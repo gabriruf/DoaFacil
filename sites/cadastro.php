@@ -15,12 +15,15 @@ session_start();
     <body>
 
         <header class="header">
-            <h1>CADASTRE - SE</h1>
-            <nav class="nav">
-                <a href="../sites/ondedoar.html">SAIBA ONDE DOAR</a> | 
-                <a href="#">SOBRE NOS</a> | 
-                <a href="#">CONHECIMENTO FINANCEIRO</a>
-            </nav>
+        <div class="a">
+            <img id="header-logo" alt='Logotipo do "Doá Facil"' src="../img/img00.png">
+        
+        <div class="textos-header">
+            <h1><span style="color: rgb(0, 165, 0);">DOA</span><span style="color: rgb(0, 81, 255);">Fácil</span></h1>
+            <h4>CONECTANDO QUEM DOA A QUEM PRECISA</h4>
+        </div>
+        </div>
+            <h3 class="titulo-login">CADASTRE - SE</h3>
         </header>
         
         <main class="container">
@@ -82,52 +85,61 @@ session_start();
             ?>
 
             <form action="./cadastro.php" method="POST" class="form-cadastro">
-                <div class="input-group full-width">
-                    <label for="nome">NOME:</label>
-                    <input type="text" id="nome" name="nome">
-                </div>
+            
+            <div class="input-group full-width">
+                <input type="text" id="nome" name="nome" placeholder=" " required>
+                <label for="nome" class="float-label">NOME:</label>
+            </div>
 
-                <div class="input-group full-width">
-                    <label for="email">EMAIL:</label>
-                    <input type="email" id="email" name="email">
-                </div>
-                <div class="input-group">
-                    <label for="celular">CELULAR:</label>
-                    <input type="tel" id="celular" name="celular">
-                </div>
+            <div class="input-group full-width">
+                <input type="email" id="email" name="email" placeholder=" " required>
+                <label for="email" class="float-label">EMAIL:</label>
+            </div>
 
-                <div class="input-group">
-                    <label for="endereco">ENDEREÇO:</label>
-                    <input type="text" id="endereco" name="endereco">
-                </div>
-                <div class="input-group">
-                    <label for="cep">CEP:</label>
-                    <input type="text" id="cep" name="cep">
-                </div>
+            <div class="input-group">
+                <input type="tel" id="celular" name="celular" placeholder="(00) 00000-0000" maxlength="15" required>
+                <label for="celular" class="float-label">CELULAR:</label>
+            </div>
 
-                <div class="input-group">
-                    <label for="tipo_acesso">TIPO DE ACESSO:</label>
-                    <input type="radio" id="donatario" name="access-type" value="Donatário">
-                    <label for="donatario">Donatário</label>
+            <div class="input-group">
+                <input type="text" id="cep" name="cep" placeholder=" " maxlength="9" required>
+                <label for="cep" class="float-label">CEP:</label>
+            </div>
 
-                    <input type="radio" id="doador" name="access-type" value="Doador">
-                    <label for="doador">Doador</label>
-                </div>
+            <div class="input-group full-width">
+                <input type="text" id="endereco" name="endereco" placeholder=" " required>
+                <label for="endereco" class="float-label">ENDEREÇO:</label>
+            </div>
 
-                <div class="input-group">
-                    <label for="senha">SENHA:</label>
-                    <input type="password" id="senha" name="senha">
-                </div>
-                <div class="input-group">
-                    <label for="confirme-senha">CONFIRME A SENHA:</label>
-                    <input type="password" id="repetir-senha" name="repetir-senha">
-                </div>
+            <div class="input-group radio-group full-width">
+                <span class="radio-title">TIPO DE ACESSO:</span>
+                
+                <input type="radio" id="donatario" name="access-type" value="Donatário" required>
+                <label for="donatario">Donatário</label>
 
-                <div class="button-container">
-                    <button type="submit" value="login" name="login" class="btn-criar">CRIAR</button>
-                </div>
-            </form>
+                <input type="radio" id="doador" name="access-type" value="Doador" required>
+                <label for="doador">Doador</label>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="senha" name="senha" placeholder=" " required>
+                <label for="senha" class="float-label">SENHA:</label>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="repetir-senha" name="repetir-senha" placeholder=" " required>
+                <label for="repetir-senha" class="float-label">CONFIRME A SENHA:</label>
+            </div>
+
+            <div class="button-container">
+                <button type="submit" value="login" name="login" class="btn-criar">CRIAR</button>
+            </div>
+        </form>
             <!--<a href="../index.html" class="btn-voltar">Voltar</a>-->
         </main>
+
+        <script src="../js/mascaras.js"></script>
+        
+
     </body>
 </html>
