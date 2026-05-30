@@ -47,8 +47,9 @@ session_start();
                             array_push($erroArray, "Todos os campos devem ser preenchidos!");
                         }
 
-                        $checkEmail = $conn->query("SELECT email_user FROM doafacil.Users
-                                                    WHERE email_user = '$email';");
+                        $checkEmail = $conn->prepare("SELECT email_user FROM doafacil.Users
+                                                    WHERE email_user = ?;");
+                        $checkEmail->execute([$email]);
                         if ($checkEmail->rowCount() > 0) {
                             array_push($erroArray, "E-mail já existe na base de dados!");
                         }
@@ -67,11 +68,11 @@ session_start();
                             }
                         } else {
                             $sql = "INSERT INTO doafacil.Users (nome_user, email_user, endereco_user, cel_user, cep_user, tipo_user, pass_user)
-                                VALUES ('$nomeUser', '$email', '$endereco', '$celular', '$cep', '$tipo_acesso', '$senha');";
-                            $conn->exec($sql);
+                                VALUES (?, ?, ?, ?, ?, ?, ?);";
+                            $stmt = $conn->prepare($sql);
+                            $stmt->execute([$nomeUser, $email, $endereco, $celular, $cep, $tipo_acesso, $senha]);
                             header("Location: ../index.php");
-                            echo "<div><p style='color: #6aff00;'>Cadastro feito com sucesso!</p></div>";
-
+                            exit();
                         }
                     } catch(PDOException $e) {
                         // Handle errors during db creation
