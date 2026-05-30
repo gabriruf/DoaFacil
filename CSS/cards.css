@@ -1,0 +1,74 @@
+           .grid-pedidos {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+                gap: 30px;
+                width: 100%;
+            }
+
+            .card {
+                background-color: white;
+                border-radius: 16px;
+                overflow: hidden;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+                border: 1px solid #eaeaea;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .card-image img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+
+            .card-content {
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+            }
+
+            .card-title {
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin-bottom: 8px;
+                color: #222;
+            }
+
+            .card-description {
+                font-size: 0.95rem;
+                color: #666;
+                line-height: 1.4;
+                margin-bottom: 20px;
+                flex-grow: 1;
+            }
+
+            .card-footer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: auto;
+            }
+
+            .priority {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                font-weight: 600;
+                font-size: 0.9rem;
+            }
+
+            .dot {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                display: inline-block;
+            }
+
+            .alta { color: #cc0000; }
+            .alta .dot { background-color: #cc0000; }
+            .media { color: #f1b200; }
+            .media .dot { background-color: #f1b200; }
+            .baixa { color: #008744; }
+            .baixa .dot { background-color: #008744; }
+    

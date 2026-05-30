@@ -14,21 +14,21 @@ session_start();
     </head>
     <body>
 
-        <header class="header">
-            <div class="a">
-                <img id="header-logo" alt='Logotipo do "Doá Facil"' src="img/img00.png">
-
-                <div class="textos-header">
-                    <h1><span style="color: rgb(0, 165, 0);">DOA</span><span style="color: rgb(0, 81, 255);">Fácil</span></h1>
-                    <h4>CONECTANDO QUEM DOA A QUEM PRECISA</h4>
-                </div>
-            </div>
+    <header class="header">
+        <div class="a">
+        <img id="header-logo" alt='Logotipo do "Doá Facil"' src="img/img00.png">
+        
+        <div class="textos-header">
+            <h1><span style="color: rgb(0, 165, 0);">DOA</span><span style="color: rgb(0, 81, 255);">Fácil</span></h1>
+            <h4>CONECTANDO QUEM DOA A QUEM PRECISA</h4>
+        </div>
+    </div>
     
-            <h3 class="titulo-login">LOGIN</h3> 
-        </header>
+    <h3 class="titulo-login">LOGIN</h3> 
+    </header>
 
         <main class="container">
-            <?php
+          <?php
             if (isset($_POST["login"])) {
                 include_once("php/database.php");
 
@@ -59,10 +59,22 @@ session_start();
                             echo "<div><p>$erros</p></div>";
                         }
                     } else {
+                        // Preenche as variáveis de sessão
                         $_SESSION["email"] = $email;
                         $_SESSION["username"] = $dados["nome_user"];
                         $_SESSION["tipo_user"] = $tipo_user;
-                        header("Location: sites/perfil.php");
+                        
+                        // --- NOVA LÓGICA DE REDIRECIONAMENTO ---
+                        if ($tipo_user === "Donatário") {
+                            // Redireciona Donatário
+                            header("Location: sites/receber.html"); 
+                        } elseif ($tipo_user === "Doador") {
+                            // Redireciona Doador
+                            header("Location: sites/doacao.html"); 
+                        } else {
+                            // Prevenção caso caia em alguma outra opção no futuro
+                            header("Location: sites/perfil.php");
+                        }
                         exit();
                     }
                 } catch (PDOException $e) {
@@ -76,32 +88,33 @@ session_start();
             ?>
             <form action="./index.php" method="POST" class="form-cadastro">
     
-                <div class="input-group full-width">
-                    <input type="email" id="email" name="email" placeholder=" " required>
-                    <label for="email" class="float-label">EMAIL:</label>
-                </div>
+    <div class="input-group full-width">
+        <input type="email" id="email" name="email" placeholder=" " required>
+        <label for="email" class="float-label">EMAIL:</label>
+    </div>
 
-                <div class="input-group full-width">
-                    <input type="password" id="senha" name="senha" placeholder=" " required>
-                    <label for="senha" class="float-label">SENHA:</label>
-                </div>
+    <div class="input-group full-width">
+        <input type="password" id="senha" name="senha" placeholder=" " required>
+        <label for="senha" class="float-label">SENHA:</label>
+    </div>
 
-                <div class="input-group full-width" id="escolha">
-                    <label for="opt-acesso" id="opcao">TIPO DE ACESSO:</label>
-                    <select name="opcoes-acesso" id="opt-acesso" required>
-                        <option value="">-- Selecione uma opção --</option>
-                        <option value="Donatário">Donatário</option>
-                        <option value="Doador">Doador</option>
-                    </select>
-                </div>
+    <div class="input-group full-width" id="escolha">
+        <label for="opt-acesso" id="opcao">TIPO DE ACESSO:</label>
+        <select name="opcoes-acesso" id="opt-acesso" required>
+            <option value="">-- Selecione uma opção --</option>
+            <option value="Donatário">Donatário</option>
+            <option value="Doador">Doador</option>
+        </select>
+    </div>
 
-                <div class="button-container">
-                    <button type="submit" value="login" name="login" class="btn">ENTRAR</button>
-                </div>
+    <div class="button-container">
+        <button type="submit" value="login" name="login" class="btn">ENTRAR</button>
+    </div>
 
-                <p class="nao-conta">Ainda não possui uma conta?&nbsp;<a href="sites/cadastro.php">Cadastre-se</a></p>
+    <p class="nao-conta">Ainda não possui uma conta?&nbsp;<a href="sites/cadastro.php">Cadastre-se</a></p>
 
-            </form>
+</form>
+            <!-- <a href="../index.html" class="btn-voltar">Voltar</a> -->
         </main>
 
     </body>

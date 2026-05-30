@@ -1,0 +1,28 @@
+.darksouls{
+    display: flex;
+    text-align: justify;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.bordas{
+    max-width: 50%;
+    padding: 2%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
+    border: 1px solid #eaeaea; 
+    border-radius: 16px; 
+}
+.ringo{
+    display: flex;
+    justify-content: center;
+}
+.elden{
+    height: 30%;
+    width: 35%;
+}
+
+.video-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+}
