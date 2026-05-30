@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if ($_SESSION["tipo_user"] !== "Donatário") {
+    header("Location: ./doacao.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>

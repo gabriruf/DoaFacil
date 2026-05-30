@@ -67,10 +67,10 @@ session_start();
                         // --- NOVA LÓGICA DE REDIRECIONAMENTO ---
                         if ($tipo_user === "Donatário") {
                             // Redireciona Donatário
-                            header("Location: sites/receber.html"); 
+                            header("Location: sites/receber.php"); 
                         } elseif ($tipo_user === "Doador") {
                             // Redireciona Doador
-                            header("Location: sites/doacao.html"); 
+                            header("Location: sites/doacao.php"); 
                         } else {
                             // Prevenção caso caia em alguma outra opção no futuro
                             header("Location: sites/perfil.php");
